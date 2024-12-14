@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "version": "1.0",
+  "name": "YouFocus",
+
+  "description": "Allows Limits to be placed YouTube to make it less distacting.",
+
+  "homepage_url": "https://github.com/mdn/webextensions-examples/tree/main/beastify",
+
+  "icons": {
+    "48": "icons/48.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.mozilla.org/*"],
+      "js": ["youfocus.js"]
+    }
+  ]
+}
