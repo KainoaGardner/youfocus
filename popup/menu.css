@@ -1,0 +1,59 @@
+:root {
+  color-scheme: light dark;
+  --light-color-background: #a4b0be;
+  --light-color-primary: #ced6e0;
+  --light-color-secondary: #ced6e0;
+  --light-color-accent: #1e1e1e;
+  --light-color-font: #000000;
+
+  --dark-color-background: #282828;
+  --dark-color-primary: #3f3f3f;
+  --dark-color-secondary: #ced6e0;
+  --dark-color-accent: #1e1e1e;
+  --dark-color-font: #ecf0f1;
+}
+
+body {
+  width: 400px;
+  background-color: light-dark(
+    var(--light-color-background),
+    var(--dark-color-background)
+  );
+}
+
+.title {
+  text-align: center;
+  margin: 0px 0px;
+  padding: 0px 0px;
+}
+
+.popup-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5px 5px;
+}
+
+button {
+  border: solid 0px;
+  font-size: 20px;
+  margin: 5px 0px;
+  padding: 5px 5px;
+  color: light-dark(var(--light-color-font), var(--dark-color-font));
+
+  background-color: light-dark(
+    var(--light-color-primary),
+    var(--dark-color-primary)
+  );
+}
+
+button:hover {
+  background-color: light-dark(
+    var(--light-color-accent),
+    var(--dark-color-accent)
+  );
+}
+
+button:active {
+  transform: scaleX(1.05);
+}

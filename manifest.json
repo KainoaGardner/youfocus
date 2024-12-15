@@ -5,16 +5,24 @@
 
   "description": "Allows Limits to be placed YouTube to make it less distacting.",
 
-  "homepage_url": "https://github.com/mdn/webextensions-examples/tree/main/beastify",
+  "homepage_url": "https://github.com/KainoaGardner/youfocus",
 
   "icons": {
     "48": "icons/48.png"
   },
 
+  "permissions": ["storage"],
+
+  "browser_action": {
+    "default_icon": "icons/48.png",
+    "default_title": "YouFocus",
+    "default_popup": "popup/menu.html"
+  },
+
   "content_scripts": [
     {
-      "matches": ["*://*.mozilla.org/*"],
-      "js": ["youfocus.js"]
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content_scripts/color.js"]
     }
   ]
 }
